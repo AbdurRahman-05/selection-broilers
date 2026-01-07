@@ -4,6 +4,9 @@ import { useCart } from '../context/CartContext';
 import { products } from '../data/products';
 import { ArrowRight, Plus } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Lottie from 'lottie-react';
+import freshMeatAnimation from '../animations/Dish of protein foods..json';
+import liveChickenAnimation from '../animations/Chicken.json';
 
 const Home = () => {
     const { t, language } = useLanguage();
@@ -83,8 +86,24 @@ const Home = () => {
             <div style={{ padding: '0 1.5rem', marginBottom: '2.5rem', marginTop: '-3rem' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                     {[
-                        { id: 'live', icon: '🐓', label: 'liveChicken' },
-                        { id: 'fresh', icon: '🥩', label: 'freshMeat' }
+                        {
+                            id: 'live',
+                            icon: (
+                                <div style={{ width: '120px', height: '120px', marginTop: '-30px', marginBottom: '-20px' }}>
+                                    <Lottie animationData={liveChickenAnimation} loop={true} />
+                                </div>
+                            ),
+                            label: 'liveChicken'
+                        },
+                        {
+                            id: 'fresh',
+                            icon: (
+                                <div style={{ width: '80px', height: '80px', marginTop: '-10px' }}>
+                                    <Lottie animationData={freshMeatAnimation} loop={true} />
+                                </div>
+                            ),
+                            label: 'freshMeat'
+                        }
                     ].map((cat) => (
                         <motion.div
                             key={cat.id}
