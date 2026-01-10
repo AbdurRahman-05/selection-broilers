@@ -3,6 +3,8 @@ import chickenPiecesImg from '../images/chicken pieces.jpg';
 import drumStickImg from '../images/drum stick.jpg';
 import wingsImg from '../images/wings.jpg';
 import breastImg from '../images/chicken brest.jpg';
+import nattukoliImg from '../images/nattukoli.jpg';
+import kaadaiImg from '../images/kaadai.jpg';
 
 export const products = [
     {
@@ -15,6 +17,28 @@ export const products = [
         image: liveChickenImg,
         description_en: 'Healthy farm-raised chicken, full vitality.',
         description_ta: 'ஆரோக்கியமான பண்ணை கோழி.'
+    },
+    {
+        id: 6,
+        name_en: 'Country Chicken (Nattukoli)',
+        name_ta: 'நாட்டுக்கோழி',
+        price: 500,
+        unit: 'kg',
+        category: 'live',
+        image: nattukoliImg,
+        description_en: 'Free-range country chicken, rich in flavor and nutrients.',
+        description_ta: 'சுவையான நாட்டுக்கோழி, ஊட்டச்சத்து நிறைந்தது.'
+    },
+    {
+        id: 7,
+        name_en: 'Quail (Kaadai)',
+        name_ta: 'காடை',
+        price: 40,
+        unit: 'piece',
+        category: 'live',
+        image: kaadaiImg,
+        description_en: 'Fresh live quail, a delicacy with health benefits.',
+        description_ta: 'புதிய உயிருள்ள காடை, ஆரோக்கிய நன்மைகள் நிறைந்தது.'
     },
     {
         id: 2,
